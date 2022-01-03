@@ -56,6 +56,7 @@ img{
 .paragraph{
   font-weight: 300;
   margin: 1rem 0;
+  color: var(--preto);
 }
 /*====  HEADER  ========*/
 .header{
@@ -157,9 +158,10 @@ img{
 
 .cards{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 1.5rem;
   align-items: center;
+  justify-content: center;
 }
 
 .card{
@@ -171,10 +173,11 @@ img{
   justify-content: center;
   align-items: center;
 
-  height: 15rem;
+  height: 12rem;
   width: 100%;
   max-width: 20rem;
-  padding: 1rem 1.5rem;
+  min-width: 15rem;
+  padding: 2rem;
   border-radius: 1rem;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.275);
 }
@@ -184,7 +187,7 @@ img{
 }
 
 .card i{
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: var(--lilas-claro);
   margin-bottom: 1rem;
 }
@@ -198,12 +201,14 @@ img{
 #projects .projects{
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
 #projects .card{
   justify-content: unset;
+  width: 100%;
   padding-top: 1.5rem;
   padding-bottom: 2rem;
   margin: 0 auto;
@@ -237,4 +242,53 @@ img{
 
 .btn.em-curso a{
   color: var(--roxo-bg);
+}
+
+/*====  CONTACTS  ========*/
+#contacts{
+  background-color: var(--branco);
+}
+
+#contacts .paragraph{
+  margin: 0;
+}
+
+.contact{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.contact i{
+  color: var(--roxo-bg);
+  font-size: 1.5rem;
+}
+
+.contact a{
+  color: var(--preto);
+}
+
+a.link{
+  color: var(--lilas);
+}
+
+/*====  FOOTER  ========*/
+.footer{
+  height: 5rem;
+  background-color: var(--lilas-claro);
+}
+
+.footer h2{
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+/*====  RESPONSIVO  ========*/
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+  #projects .card{
+    height: 40rem;
+  }
 }
